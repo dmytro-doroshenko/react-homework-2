@@ -4,6 +4,7 @@ import { UserDetails } from '../../components/UserDetails/UserDetails';
 import { UserListOption } from '../../components/UserListOption/UserListOption';
 import { accessToken } from '../../constants';
 import './UserPage.scss';
+import {LoadingSpinner} from "../../components/LoadingSpinner/LoadingSpinner";
 
 const CN = 'user-page';
 
@@ -65,7 +66,7 @@ export class UserPage extends Component {
           error && <div>{error}</div>
         }
         {
-          isLoading && <div>Loading...</div>
+          isLoading && <LoadingSpinner/>
         }
 
         {
